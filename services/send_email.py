@@ -14,8 +14,13 @@ class EmailSender:
         self.email_user = os.getenv('EMAIL_USER', '')
         self.email_password = os.getenv('EMAIL_PASSWORD', '')
         self.receiver_email = 'namanjha2014@gmail.com'  # Hardcoded as specified
+        self.is_configured = bool(self.email_user and self.email_password)
 
     def send_mail(self, recipient_email, subject, body):
+        if not self.is_configured:
+            print("⚠️ Email not configured, skipping email send")
+            return False
+            
         try:
             msg = MIMEMultipart()
             msg['From'] = self.email_user
