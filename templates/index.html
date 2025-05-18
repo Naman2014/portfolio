@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block title %}Home | Naman Shankar Portfolio{% endblock %}
+
+{% block content %}
+<section class="hero" id="home-hero" style="position: relative; overflow: hidden; display: flex; justify-content: center; align-items: center; text-align: center; min-height: 80vh; padding: 40px 20px;">
+    <!-- Live animated background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Overlay gradient -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.7) 100%); z-index: 1;"></div>
+    
+    <div style="position: relative; z-index: 2; width: 100%; max-width: 800px; margin: 0 auto;">
+        <!-- Circular profile picture -->
+        <div class="profile-picture-container">
+            <div class="profile-picture">
+                <!-- Replace with your actual profile picture, or keep as is if using 'profile.jpg' as directed -->
+                <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Naman Shankar" onerror="this.src='https://via.placeholder.com/300x300?text=Naman+Shankar'">
+            </div>
+        </div>
+        
+        <h1 style="font-size: 3.5rem; margin-bottom: 20px; line-height: 1.2;">Hello, I'm <span style="color: var(--primary-color);">Naman Shankar</span></h1>
+        <h2 style="font-size: 1.8rem; margin-bottom: 30px; font-weight: 400; line-height: 1.4;">Data Scientist & AI Specialist</h2>
+        <p style="margin: 0 auto 30px; font-size: 1.1rem; max-width: 600px; line-height: 1.6;">
+            I create intelligent solutions through advanced data analysis, machine learning, and computer vision.
+            Specializing in AI-driven applications with a focus on real-world impact.
+        </p>
+        <div>
+            <a href="{{ url_for('projects') }}" class="btn">View My Work</a>
+            <a href="{{ url_for('contact') }}" class="btn" style="background: transparent; border: 2px solid var(--primary-color); margin-left: 15px;">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section style="padding: 80px 0; background-color: #0a0a0a;">
+    <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-slider-container">
+            <div class="skills-slider unified">
+                <!-- Programming -->
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="skill-name">Programming</div>
+                </div>
+                
+                <!-- Data Analysis -->
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+                    <div class="skill-name">Data Analysis</div>
+                </div>
+                
+                <!-- Classical ML/DL -->
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                    <div class="skill-name">Classical ML/DL</div>
+                </div>
+                
+                <!-- NLP -->
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-language"></i></div>
+                    <div class="skill-name">NLP</div>
+                </div>
+                
+                <!-- Computer Vision -->
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-camera-retro"></i></div>
+                    <div class="skill-name">Computer Vision</div>
+                </div>
+                
+                <!-- Gen AI -->
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                    <div class="skill-name">Gen AI</div>
+                </div>
+                
+                <!-- Database Management -->
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <div class="skill-name">Database Management</div>
+                </div>
+            </div>
+            
+            <!-- Slider navigation arrows -->
+            <div class="slider-navigation">
+                <button class="slider-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section style="padding: 70px 0; background-color: #0f0f0f; text-align: center; border-top: 1px solid #222;">
+    <div class="container">
+        <h2 class="section-title">Ready to Collaborate?</h2>
+        <p style="max-width: 700px; margin: 0 auto 30px; color: #bbb; font-size: 1.1rem; line-height: 1.6;">
+            I'm always looking for interesting data science projects and research opportunities. 
+            Let's work together to solve complex problems with data-driven solutions.
+        </p>
+        <a href="{{ url_for('contact') }}" class="btn" style="padding: 14px 32px; font-size: 1.1rem;">Get in Touch</a>
+    </div>
+</section>
+{% endblock %} 

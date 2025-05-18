@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block title %}Medical Image Analysis | Naman Shankar{% endblock %}
+
+{% block content %}
+<section class="project-detail">
+    <div class="container">
+        <div class="project-header">
+            <h1 class="project-title">Medical Image Analysis</h1>
+            <div class="project-meta">
+                <span class="project-date">May 2024 - July 2024</span>
+                <span class="project-location">Dewinter India</span>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-showcase">
+                <div class="project-image">
+                    <i class="fas fa-microscope" style="font-size: 5rem; color: var(--primary-color);"></i>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Project Overview</h2>
+                <p>
+                    At Dewinter India, I developed automated systems for various medical tests using advanced image processing techniques. The project focused on creating comprehensive diagnostic tools for RBC classification, male vitality tests, and cell movement analysis. This system significantly enhanced the diagnostic facilities by providing accurate, efficient, and consistent analysis of medical imaging data.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Technologies Used</h2>
+                <div class="tech-tags">
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Linux</span>
+                    <span class="tech-tag">QT</span>
+                    <span class="tech-tag">Image Processing</span>
+                    <span class="tech-tag">Medical Diagnostics</span>
+                    <span class="tech-tag">Cell Classification</span>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Key Features</h2>
+                <ul class="feature-list">
+                    <li>
+                        <h3>Advanced Image Processing</h3>
+                        <p>Utilized OpenCV to implement sophisticated image processing modules for detailed cell analysis, enabling automated identification and classification of various cell types and characteristics.</p>
+                    </li>
+                    <li>
+                        <h3>Custom Linux Application</h3>
+                        <p>Developed a specialized Linux application using QT framework, providing an intuitive interface for medical professionals to capture images, perform manipulations, and generate detailed analytical reports.</p>
+                    </li>
+                    <li>
+                        <h3>Real-time Analysis</h3>
+                        <p>Implemented algorithms for real-time test analysis with an impressive 84% accuracy rate, delivering immediate results for time-sensitive medical diagnostics.</p>
+                    </li>
+                    <li>
+                        <h3>Workflow Optimization</h3>
+                        <p>Boosted processing time by 80% compared to manual methods, significantly improving laboratory throughput and enabling medical professionals to focus on interpretation rather than repetitive analysis tasks.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Results and Impact</h2>
+                <p>
+                    The automated medical image analysis system delivered substantial improvements to Dewinter India's diagnostic capabilities. The 84% accuracy in real-time test analysis represented a significant advancement over previous methods, while the 80% reduction in processing time dramatically improved laboratory efficiency. The system's intuitive interface and comprehensive reporting features made it accessible to medical staff with varying levels of technical expertise, facilitating widespread adoption within the organization.
+                </p>
+            </div>
+
+            <div class="project-navigation">
+                <a href="{{ url_for('projects') }}" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

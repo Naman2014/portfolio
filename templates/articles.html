@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}Articles | Naman Shankar{% endblock %}
+
+{% block content %}
+<section class="articles">
+    <div class="container">
+        <h2 class="section-title">Data Science Insights</h2>
+        <div class="article-grid">
+            <!-- Article 1 -->
+            <div class="article-card">
+                <div class="article-img" style="display: flex; justify-content: center; align-items: center; background-color: #222;">
+                    <i class="fas fa-envelope-open-text" style="font-size: 4rem; color: var(--primary-color);"></i>
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Send Important Emails to WhatsApp — No More Missed Alerts</h3>
+                    <p class="article-desc">A practical solution to convert critical emails into WhatsApp notifications, ensuring you never miss important updates and alerts even when away from your inbox.</p>
+                    <a href="https://medium.com/@namanjha2014/send-important-emails-to-whatsapp-no-more-missed-alerts-f83370241bd7" target="_blank" class="read-more">Read on Medium <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Article 2 -->
+            <div class="article-card">
+                <div class="article-img" style="display: flex; justify-content: center; align-items: center; background-color: #222;">
+                    <i class="fas fa-road" style="font-size: 4rem; color: var(--primary-color);"></i>
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Automated Classification and Detection of Pavement Surface Condition using Deep Learning</h3>
+                    <p class="article-desc">An in-depth exploration of using computer vision and deep learning techniques to automatically detect, classify, and quantify pavement distresses for improved infrastructure maintenance.</p>
+                    <a href="https://medium.com/@namanjha2014/automated-classification-and-detection-of-pavement-surface-condition-using-deep-learning-889ef0e16f99" target="_blank" class="read-more">Read on Medium <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Article 3 -->
+            <div class="article-card">
+                <div class="article-img" style="display: flex; justify-content: center; align-items: center; background-color: #222;">
+                    <i class="fas fa-project-diagram" style="font-size: 4rem; color: var(--primary-color);"></i>
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">An Automated Clustering Approach for Efficient Question Management</h3>
+                    <p class="article-desc">How clustering algorithms can be employed to organize and manage large volumes of questions, improving educational outcomes and instructor efficiency.</p>
+                    <a href="https://medium.com/@namanjha2014/an-automated-clustering-approach-for-efficient-question-management-67bc05484322" target="_blank" class="read-more">Read on Medium <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

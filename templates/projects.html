@@ -1,0 +1,179 @@
+{% extends "layout.html" %}
+
+{% block title %}Projects | Naman Shankar{% endblock %}
+
+{% block content %}
+<section class="projects">
+    <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="project-grid">
+            <!-- Project 1: Data Science Intern -->
+            <a href="{{ url_for('project_newsletter') }}" class="project-link">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-newspaper" style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Newsletter Management System (MVP)</h3>
+                        <div class="project-desc">
+                            <p>Automate the management and matching of newsletters with the titles, including ad detection, topic modelling and sentiment analysis</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">IMAP</span>
+                            <span class="tech-tag">Selenium</span>
+                            <span class="tech-tag">Gemini API</span>
+                        </div>
+                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Project 2: Computer Vision Intern -->
+            <a href="{{ url_for('project_medical') }}" class="project-link">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-microscope" style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Medical Image Analysis</h3>
+                        <div class="project-desc">
+                            <p>Automate various tests using image processing techniques and generate the comprehensive reports to enhance diagnostic facilities</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">QT</span>
+                            <span class="tech-tag">Image Processing</span>
+                        </div>
+                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Project 3: Artificial Intelligence Intern -->
+            <a href="{{ url_for('project_game') }}" class="project-link">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-gamepad" style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">AI-Driven Game Mechanics</h3>
+                        <div class="project-desc">
+                            <p>Enriched an AI-driven gaming mechanics and enhanced the user engagement by refining algorithms and integrating strategic models</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Reinforcement Learning</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Game AI</span>
+                            <span class="tech-tag">Data Analysis</span>
+                        </div>
+                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Project 4: Pavement Distress Detection -->
+            <a href="{{ url_for('project_pavement') }}" class="project-link">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-road" style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Pavement Distress Detection</h3>
+                        <div class="project-desc">
+                            <p>Automate localization, classification and quantification of several pavement distresses using advanced computer vision techniques</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">YOLOv8</span>
+                            <span class="tech-tag">U-Net</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Project 5: What's In The Picture -->
+            <a href="{{ url_for('project_picture') }}" class="project-link">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-car" style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">What's In The Picture</h3>
+                        <div class="project-desc">
+                            <p>Develop an automated system for analyzing car service photos for image authenticity, vehicle door status and license plate reading</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">VGG-19</span>
+                            <span class="tech-tag">YOLOv8</span>
+                            <span class="tech-tag">PaddleOCR</span>
+                            <span class="tech-tag">Image Analysis</span>
+                        </div>
+                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Project 6: Automated Question Clustering -->
+            <a href="{{ url_for('project_clustering') }}" class="project-link">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-comments" style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Automated Question Clustering System</h3>
+                        <div class="project-desc">
+                            <p>Develop an automated system using clustering to organize and manage student questionnaires for improved educational discussions</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">DBSCAN</span>
+                            <span class="tech-tag">TF-IDF</span>
+                            <span class="tech-tag">RegEx</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+.project-meta {
+    font-weight: 500;
+    color: #ddd;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.project-desc {
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.project-desc p {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+</style>
+{% endblock %} 

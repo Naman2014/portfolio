@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}AI-Driven Game Mechanics | Naman Shankar{% endblock %}
+
+{% block content %}
+<section class="project-detail">
+    <div class="container">
+        <div class="project-header">
+            <h1 class="project-title">AI-Driven Game Mechanics</h1>
+            <div class="project-meta">
+                <span class="project-date">November 2023 - December 2023</span>
+                <span class="project-location">TangiApps IT Solution Private Limited</span>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-showcase">
+                <div class="project-image">
+                    <i class="fas fa-gamepad" style="font-size: 5rem; color: var(--primary-color);"></i>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Project Overview</h2>
+                <p>
+                    During my internship at TangiApps IT Solution, I worked on enhancing AI-driven gaming mechanics to improve player engagement and retention. The project focused on implementing advanced reinforcement learning techniques to create more responsive and adaptive gameplay experiences. By analyzing player behavior and optimizing game difficulty and reward systems, we aimed to create a more engaging and balanced gaming experience that would keep players coming back.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Technologies Used</h2>
+                <div class="tech-tags">
+                    <span class="tech-tag">Reinforcement Learning</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">Game AI</span>
+                    <span class="tech-tag">Data Analysis</span>
+                    <span class="tech-tag">Statistical Modeling</span>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Key Features</h2>
+                <ul class="feature-list">
+                    <li>
+                        <h3>Player Engagement Optimization</h3>
+                        <p>Elevated player engagement by 25% for motion gaming by leveraging Reinforcement Learning strategies, addressing game-level challenges that had previously led to player frustration and dropout.</p>
+                    </li>
+                    <li>
+                        <h3>Dynamic Difficulty Adjustment</h3>
+                        <p>Implemented an adaptive difficulty system that modifies game challenges based on player performance, creating a more personalized and balanced experience for players of varying skill levels.</p>
+                    </li>
+                    <li>
+                        <h3>Game Dynamics Refinement</h3>
+                        <p>Refined game dynamics by 1.5x through careful balancing of exploration and reward systems in AI-driven scenarios, creating more satisfying progression curves for players.</p>
+                    </li>
+                    <li>
+                        <h3>Data-Driven Optimization</h3>
+                        <p>Analyzed over 3,000 instances of gameplay data to identify patterns in player behavior and refine algorithms to deliver more engaging experiences at critical points in the game.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Results and Impact</h2>
+                <p>
+                    The implementation of these AI-driven mechanics resulted in a 15% increase in player retention rates, indicating that players found the enhanced game experience more engaging and satisfying. The project demonstrated how machine learning techniques could be effectively applied to game design to create more dynamic and personalized experiences. The success of this approach led to its adoption across other game titles within the company's portfolio, establishing a new standard for AI integration in their game development process.
+                </p>
+            </div>
+
+            <div class="project-navigation">
+                <a href="{{ url_for('projects') }}" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

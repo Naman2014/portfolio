@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}Newsletter Management System | Naman Shankar{% endblock %}
+
+{% block content %}
+<section class="project-detail">
+    <div class="container">
+        <div class="project-header">
+            <h1 class="project-title">Newsletter Management System</h1>
+            <div class="project-meta">
+                <span class="project-date">July 2024 - August 2024</span>
+                <span class="project-location">Social Presence</span>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-showcase">
+                <div class="project-image">
+                    <i class="fas fa-newspaper" style="font-size: 5rem; color: var(--primary-color);"></i>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Project Overview</h2>
+                <p>
+                    This project involved developing an MVP (Minimum Viable Product) for Social Presence to automate the management and matching of newsletters with titles. The system incorporated ad detection, topic modeling, and sentiment analysis capabilities to process and organize email newsletters efficiently. This MVP streamlined the content management workflow and provided valuable insights into newsletter dynamics and advertising patterns.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Technologies Used</h2>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">IMAP</span>
+                    <span class="tech-tag">DFS Algorithm</span>
+                    <span class="tech-tag">Selenium</span>
+                    <span class="tech-tag">Fuzzy Matching</span>
+                    <span class="tech-tag">Gemini API</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">NLP</span>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Key Features</h2>
+                <ul class="feature-list">
+                    <li>
+                        <h3>Email Content Retrieval</h3>
+                        <p>Retrieved emails through IMAP, utilizing depth-first search (DFS) algorithms to parse HTML content and systematically store both metadata and content in a structured format.</p>
+                    </li>
+                    <li>
+                        <h3>Intelligent Ad Detection</h3>
+                        <p>Employed fuzzy-matching techniques to detect advertisements by comparing content with a curated list of ad-disclosures, successfully identifying self-promotion and various ad types within newsletters.</p>
+                    </li>
+                    <li>
+                        <h3>Content Analysis</h3>
+                        <p>Extracted ad URLs with Selenium for further analysis, and processed news content to identify topics, genres, and sentiment patterns using Gemini API's natural language processing capabilities.</p>
+                    </li>
+                    <li>
+                        <h3>Data Management</h3>
+                        <p>Designed and implemented a PostgreSQL database schema to efficiently store and query the processed newsletter data, enabling quick access and comprehensive analysis.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Results and Impact</h2>
+                <p>
+                    The MVP delivered to Social Presence significantly improved their newsletter processing workflow, reducing manual analysis time by approximately 70%. The automated ad detection achieved over 85% accuracy, while the topic modeling and sentiment analysis provided valuable insights into content performance. This system became a crucial tool for the company's content strategy, enabling data-driven decisions and more effective newsletter targeting.
+                </p>
+            </div>
+
+            <div class="project-navigation">
+                <a href="{{ url_for('projects') }}" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

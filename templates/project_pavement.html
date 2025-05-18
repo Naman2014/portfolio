@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block title %}Pavement Distress Detection | Naman Shankar{% endblock %}
+
+{% block content %}
+<section class="project-detail">
+    <div class="container">
+        <div class="project-header">
+            <h1 class="project-title">Pavement Distress Detection and Quantification</h1>
+            <div class="project-meta">
+                <span class="project-date">August 2023 - April 2024</span>
+                <span class="project-location">IIT Kharagpur | Prof. K K Kuna</span>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-showcase">
+                <div class="project-image">
+                    <i class="fas fa-road" style="font-size: 5rem; color: var(--primary-color);"></i>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Project Overview</h2>
+                <p>
+                    This project focused on developing an automated system for the localization, classification, and quantification of various pavement distresses using advanced computer vision techniques. The goal was to create a robust solution that could identify different types of road damage from images and video footage, providing accurate measurements and assessments that could be used for infrastructure maintenance planning.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Technologies Used</h2>
+                <div class="tech-tags">
+                    <span class="tech-tag">YOLOv8</span>
+                    <span class="tech-tag">U-Net</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">Computer Vision</span>
+                    <span class="tech-tag">Graph Traversal Algorithms</span>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Key Features</h2>
+                <ul class="feature-list">
+                    <li>
+                        <h3>Real-time Distress Detection</h3>
+                        <p>Implemented YOLOv8 for effective classification of pavement distresses, improving the accuracy of identifying various types of damage in real-time video analysis.</p>
+                    </li>
+                    <li>
+                        <h3>Semantic Segmentation</h3>
+                        <p>Applied U-Net for semantic segmentation to extract masked pavements, enabling precise identification of distress boundaries.</p>
+                    </li>
+                    <li>
+                        <h3>Distress Quantification</h3>
+                        <p>Employed graph traversal algorithms to measure and quantify detected distresses, providing detailed metrics on length, width, area, and severity.</p>
+                    </li>
+                    <li>
+                        <h3>Performance Improvements</h3>
+                        <p>Enhanced real-time processing speed by 40% through optimization of the detection pipeline while maintaining high accuracy.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Results and Impact</h2>
+                <p>
+                    The system achieved an accuracy rate of 87% in detecting and quantifying pavement distresses, significantly improving upon previous methods. The real-time processing capabilities make it suitable for integration with mobile inspection vehicles, enabling faster and more comprehensive road condition assessments. This technology helps highway authorities prioritize maintenance activities and allocate resources more effectively.
+                </p>
+            </div>
+
+            <div class="project-navigation">
+                <a href="{{ url_for('projects') }}" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

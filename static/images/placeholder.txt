@@ -1,0 +1,9 @@
+Please replace this file with your profile picture.
+
+To use your profile image:
+1. Add a JPG or PNG file of your photo in this directory
+2. Name it 'profile.jpg' or 'profile.png'
+3. Make sure the image is high quality (at least 500x500 pixels)
+4. Preferably use a square image with your face centered
+
+The image will be displayed as a circular profile picture on the front page. 

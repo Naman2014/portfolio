@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}Contact | Naman Shankar{% endblock %}
+
+{% block content %}
+<section class="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
+            <p style="color: #ddd; margin-bottom: 20px;">
+                I'm always interested in collaborative research opportunities, data science projects, and discussions about AI and machine learning advancements.
+            </p>
+            <p style="color: #ddd;">
+                Whether you have a project in mind, want to discuss potential collaboration, or just want to connect, feel free to reach out!
+            </p>
+        </div>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}" style="background-color: rgba(255, 0, 0, 0.1); color: #fff; padding: 15px; border-radius: 5px; text-align: center; margin-bottom: 30px; border: 1px solid var(--primary-color);">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        <div class="contact-form">
+            <form method="POST" action="{{ url_for('contact') }}">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %} 

@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block title %}What's In The Picture | Naman Shankar{% endblock %}
+
+{% block content %}
+<section class="project-detail">
+    <div class="container">
+        <div class="project-header">
+            <h1 class="project-title">What's In The Picture</h1>
+            <div class="project-meta">
+                <span class="project-date">January 2024 - March 2024</span>
+                <span class="project-location">Carselona Daily</span>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-showcase">
+                <div class="project-image">
+                    <i class="fas fa-car" style="font-size: 5rem; color: var(--primary-color);"></i>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Project Overview</h2>
+                <p>
+                    The "What's In The Picture" project involved developing an automated system for analyzing car service photos. The system was designed to perform three key functions: verify image authenticity to detect manipulated images, analyze vehicle door status (open/closed), and extract information from license plates. This solution aimed to enhance the efficiency and reliability of automotive service documentation.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Technologies Used</h2>
+                <div class="tech-tags">
+                    <span class="tech-tag">VGG-19</span>
+                    <span class="tech-tag">YOLOv8</span>
+                    <span class="tech-tag">KerasOCR</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">Image Processing</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Key Features</h2>
+                <ul class="feature-list">
+                    <li>
+                        <h3>Image Authenticity Verification</h3>
+                        <p>Developed a robust image classification system leveraging VGG-19 to distinguish between genuine and manipulated images, helping prevent fraud in service documentation.</p>
+                    </li>
+                    <li>
+                        <h3>Vehicle Door Status Detection</h3>
+                        <p>Implemented YOLOv8 for precise car detection and door status analysis, enabling automated verification of vehicle condition during service inspections.</p>
+                    </li>
+                    <li>
+                        <h3>License Plate Recognition</h3>
+                        <p>Integrated PaddleOCR for accurate number plate recognition, allowing for automated vehicle identification and record-keeping.</p>
+                    </li>
+                    <li>
+                        <h3>Comprehensive Analysis Pipeline</h3>
+                        <p>Created a unified analysis workflow that processes images through multiple detection models while maintaining high accuracy across diverse lighting conditions and camera angles.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Results and Impact</h2>
+                <p>
+                    The project delivered an overall accuracy of 88% across its various detection and recognition components. By automating the analysis of service photos, the system significantly reduced the time required for manual verification while enhancing the reliability of vehicle documentation. This technology helps automotive service providers streamline their operations, reduce fraud, and improve customer trust through accurate record-keeping.
+                </p>
+            </div>
+
+            <div class="project-navigation">
+                <a href="{{ url_for('projects') }}" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

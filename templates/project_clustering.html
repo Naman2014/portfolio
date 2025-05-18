@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block title %}Automated Question Clustering | Naman Shankar{% endblock %}
+
+{% block content %}
+<section class="project-detail">
+    <div class="container">
+        <div class="project-header">
+            <h1 class="project-title">Automated Question Clustering System</h1>
+            <div class="project-meta">
+                <span class="project-date">September 2023 - November 2023</span>
+                <span class="project-location">IIT Kharagpur | Prof. Mrigank Sharad</span>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-showcase">
+                <div class="project-image">
+                    <i class="fas fa-comments" style="font-size: 5rem; color: var(--primary-color);"></i>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Project Overview</h2>
+                <p>
+                    The Automated Question Clustering System was developed to organize and manage student questionnaires more efficiently. In educational settings, instructors often receive similar questions from different students, making it challenging to address each one individually. This project aimed to develop an automated system that could group similar questions together, allowing instructors to provide comprehensive answers to common themes and improve the efficiency of educational discussions.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Technologies Used</h2>
+                <div class="tech-tags">
+                    <span class="tech-tag">DBSCAN</span>
+                    <span class="tech-tag">TF-IDF</span>
+                    <span class="tech-tag">RegEx</span>
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">NLTK</span>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Key Features</h2>
+                <ul class="feature-list">
+                    <li>
+                        <h3>Advanced Text Preprocessing</h3>
+                        <p>Engineered a comprehensive preprocessing pipeline using RegEx and TF-IDF for effective data cleaning and vectorization, ensuring optimal text representation for clustering.</p>
+                    </li>
+                    <li>
+                        <h3>Density-Based Clustering</h3>
+                        <p>Adopted DBSCAN (Density-Based Spatial Clustering of Applications with Noise) to categorize student inquiries, which proved more effective than traditional k-means for identifying natural question groups.</p>
+                    </li>
+                    <li>
+                        <h3>Hyperparameter Optimization</h3>
+                        <p>Improved cluster accuracy by 75% through careful adjustment of DBSCAN parameters, enabling better identification of core, border, and noise points in the question space.</p>
+                    </li>
+                    <li>
+                        <h3>Topic Summarization</h3>
+                        <p>Implemented automated topic extraction for each cluster, providing instructors with a concise overview of the main themes in student questions.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2 class="project-section-title">Results and Impact</h2>
+                <p>
+                    The system significantly improved the management of student inquiries by automatically grouping related questions together. This allowed instructors to address multiple questions with a single comprehensive response, reducing response time while improving answer quality. The clustering approach also revealed patterns in student confusion, helping instructors identify areas of the curriculum that needed additional clarification. Educational staff reported saving approximately 40% of the time previously spent on managing and responding to student questions.
+                </p>
+            </div>
+
+            <div class="project-navigation">
+                <a href="{{ url_for('projects') }}" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 
