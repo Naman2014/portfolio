@@ -98,10 +98,11 @@ header {
     height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 100px 20px 0 20px;
+    position: relative;
 }
 
 .hero h1 {
@@ -497,6 +498,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding-top: 90px;
+        min-height: 70vh;
+    }
+    
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -537,7 +543,8 @@ footer {
 
 @media (max-width: 576px) {
     .hero {
-        padding: 0 15px;
+        padding-top: 70px;
+        min-height: 60vh;
     }
     
     .hero h1 {
@@ -745,10 +752,12 @@ footer {
 
 /* Profile Picture */
 .profile-picture-container {
-    margin: 0 auto 30px;
-    width: 180px;
-    height: 180px;
-    position: relative;
+    margin-top: 0;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
 }
 
 .profile-picture {
@@ -776,9 +785,8 @@ footer {
 /* Mobile Optimizations for Profile Picture */
 @media (max-width: 768px) {
     .profile-picture-container {
-        width: 150px;
-        height: 150px;
-        margin: 0 auto 25px;
+        margin-top: 0;
+        margin-bottom: 20px;
     }
 
     .profile-picture {
