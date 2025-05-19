@@ -1100,4 +1100,173 @@ footer {
     width: 40px;
     height: 3px;
     background-color: var(--primary-color);
+}
+
+/* Mobile Navigation */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        transition: left 0.3s ease;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 15px 0;
+    }
+
+    .nav-menu a {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Improved Typography for Mobile */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+        padding: 0 15px;
+    }
+
+    .hero h2 {
+        font-size: 1.4rem;
+        padding: 0 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+    }
+
+    .project-desc {
+        font-size: 0.95rem;
+    }
+}
+
+/* Enhanced Touch Targets */
+.btn, 
+.social-icon,
+.nav-menu a,
+.project-link,
+.article-card {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Improved Grid Layouts */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .about-content {
+        padding: 0 20px;
+    }
+}
+
+/* Better Spacing for Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .projects,
+    .articles,
+    .about {
+        padding: 60px 0;
+    }
+
+    .project-card,
+    .article-card {
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        padding: 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .article-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Improved Skills Section for Mobile */
+@media (max-width: 768px) {
+    .skills-slider-container {
+        padding: 0 10px;
+    }
+
+    .skill-item {
+        min-width: 120px;
+        padding: 15px;
+    }
+
+    .skill-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .skill-name {
+        font-size: 0.9rem;
+    }
 } 
