@@ -3,7 +3,7 @@ from services.send_email import EmailSender
 import os
 
 app = Flask(__name__)
-app.secret_key = '5581c6f3343f1550d4cc9bdd9b27838d'  # Required for flash messages
+app.secret_key = os.getenv('SECRET_KEY', '5581c6f3343f1550d4cc9bdd9b27838d')  # Use environment variable with fallback
 
 # Initialize Email Sender
 email_sender = EmailSender()
@@ -109,5 +109,5 @@ def admin_logout():
     return redirect(url_for('home'))
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 10000))
-    app.run(host='0.0.0.0', port=port, debug=False) 
+    # For local development
+    app.run(host='0.0.0.0', port=8080, debug=True) 
