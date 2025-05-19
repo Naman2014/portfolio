@@ -15,6 +15,7 @@ class EmailSender:
         self.email_password = os.getenv('EMAIL_PASSWORD', '')
         self.receiver_email = 'namanjha2014@gmail.com'  # Hardcoded as specified
         self.is_configured = bool(self.email_user and self.email_password)
+        print(f"EMAIL_USER: {self.email_user}, EMAIL_PASSWORD: {'set' if self.email_password else 'not set'}")
 
     def send_mail(self, recipient_email, subject, body):
         if not self.is_configured:
@@ -49,3 +50,6 @@ Subject: {subject}
 Message: {message}
         """
         return self.send_mail(self.receiver_email, email_subject, email_body)
+
+    def __post_init__(self):
+        print(f"EMAIL_USER: {self.email_user}, EMAIL_PASSWORD: {'set' if self.email_password else 'not set'}")

@@ -101,7 +101,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding: 100px 20px 0 20px;
+    padding: 40px 20px 0 20px;
     position: relative;
 }
 
@@ -118,18 +118,25 @@ header {
     line-height: 1.4;
 }
 
-.btn {
+.btn,
+.btn-outline {
     display: inline-block;
     padding: 12px 30px;
-    background: var(--primary-color);
-    color: var(--light-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    font-size: 1.1rem;
     font-weight: 500;
     letter-spacing: 0.5px;
     text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    min-width: 160px; /* Ensures both buttons have the same width */
+}
+
+.btn {
+    background: var(--primary-color);
+    color: var(--light-color);
+    border: none;
 }
 
 .btn:hover {
@@ -137,6 +144,34 @@ header {
     color: var(--light-color);
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--light-color);
+    border-color: var(--primary-color-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+.btn-spacing {
+    margin-left: 15px;
+}
+
+.btn-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 /* About Section - Complete Responsive Overhaul */
@@ -499,7 +534,7 @@ footer {
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: 90px;
+        padding-top: 30px;
         min-height: 70vh;
     }
     
@@ -541,9 +576,9 @@ footer {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
     .hero {
-        padding-top: 70px;
+        padding-top: 15px;
         min-height: 60vh;
     }
     
@@ -752,12 +787,33 @@ footer {
 
 /* Profile Picture */
 .profile-picture-container {
-    margin-top: 0;
-    margin-bottom: 30px;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 30px auto;
+    margin-top: 32px; /* Default margin below header */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .profile-picture-container {
+        width: 140px;
+        height: 140px;
+        margin-top: 28px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture-container {
+        width: 120px;
+        height: 120px;
+        margin-top: 24px;
+        margin-bottom: 15px;
+    }
 }
 
 .profile-picture {
@@ -774,48 +830,12 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top; /* Ensures the face is properly centered */
+    object-position: center top;
     transition: transform 0.5s ease;
 }
 
 .profile-picture:hover img {
     transform: scale(1.1);
-}
-
-/* Mobile Optimizations for Profile Picture */
-@media (max-width: 768px) {
-    .profile-picture-container {
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-
-    .profile-picture {
-        border-width: 3px;
-    }
-}
-
-@media (max-width: 480px) {
-    .profile-picture-container {
-        width: 130px;
-        height: 130px;
-        margin: 0 auto 20px;
-    }
-
-    .profile-picture {
-        border-width: 2px;
-    }
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
-    }
 }
 
 /* Experience Timeline - Complete Responsive Overhaul */

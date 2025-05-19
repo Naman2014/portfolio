@@ -8,10 +8,6 @@ app.secret_key = '5581c6f3343f1550d4cc9bdd9b27838d'  # Required for flash messag
 # Initialize Email Sender
 email_sender = EmailSender()
 
-# Admin credentials - should be stored more securely in production
-ADMIN_USERNAME = os.getenv('ADMIN_USERNAME', 'admin')
-ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', 'password')
-
 # Social media links configuration
 social_links = {
     'github': 'https://github.com/namanshankar',
@@ -86,27 +82,6 @@ def project_newsletter():
 @app.route('/projects/medical-image-analysis')
 def project_medical():
     return render_template('project_medical.html')
-
-@app.route('/admin/login', methods=['GET', 'POST'])
-def admin_login():
-    if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
-        
-        if username == ADMIN_USERNAME and password == ADMIN_PASSWORD:
-            session['admin_logged_in'] = True
-            flash('Login successful', 'success')
-            return redirect(url_for('home'))
-        else:
-            flash('Invalid credentials', 'error')
-    
-    return render_template('admin_login.html')
-
-@app.route('/admin/logout')
-def admin_logout():
-    session.pop('admin_logged_in', None)
-    flash('Logged out successfully', 'success')
-    return redirect(url_for('home'))
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 10000))
