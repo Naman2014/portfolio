@@ -765,11 +765,37 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top; /* Ensures the face is properly centered */
     transition: transform 0.5s ease;
 }
 
 .profile-picture:hover img {
     transform: scale(1.1);
+}
+
+/* Mobile Optimizations for Profile Picture */
+@media (max-width: 768px) {
+    .profile-picture-container {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 25px;
+    }
+
+    .profile-picture {
+        border-width: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture-container {
+        width: 130px;
+        height: 130px;
+        margin: 0 auto 20px;
+    }
+
+    .profile-picture {
+        border-width: 2px;
+    }
 }
 
 @keyframes pulse {
